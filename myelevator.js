@@ -64,17 +64,9 @@ Elevator.prototype.decide = function() {
     var building = simulator.get_building();
     var num_floors = building.get_num_floors();
     var elevators = Simulator.get_instance().get_building().get_elevator_system().get_elevators();
-    var time_counter = simulator.get_time_counter();
     var requests = simulator.get_requests();
-
     var elevator = this;
-
-    // people adalah orang yang ada di dalam lift
     var people = this.get_people();
-
-//    elevator.status = elevator.at_floor() > elevator.get_destination_floor() ? 'up' : 'down';
-
-//    var person = people.length > 0 ? people[0] : undefined;
 
     if (elevator) {
         if (people.length > 0) {
@@ -155,16 +147,6 @@ Elevator.prototype.decide = function() {
         }
     }
 
-// jika ada penumpang
-//    if (person) {
-//        person.get_floor();
-//        return this.commit_decision(person.get_destination_floor());
-//    }
-
-// req = 2 5 1
-// elevator 3
-//console.log(stopbro);
-
     if (people == 0) {
         for (var i = 0; i < requests.length; i++) {
             var handled = false;
@@ -180,10 +162,6 @@ Elevator.prototype.decide = function() {
             }
         }
     }
-
-
-
-
 
     return this.commit_decision(Math.floor(num_floors / 2));
 };

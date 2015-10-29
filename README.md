@@ -6,7 +6,4 @@ Try to:
 1. minimize total_people_wait_time_in_elevator  
 2. minimize total_people_wait_time_out_elevator  
 3. minimize total_elevator_traveled_distance  
-4. maximize total_delivered_people  
-# elevator 
-# elevator 
-# elevator 
+4. maximize total_delivered_people
